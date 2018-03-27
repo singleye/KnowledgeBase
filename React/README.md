@@ -2,6 +2,7 @@
 * [1.开发环境搭建](#1)
 * [2.创建项目](#2)
 * [3.React开发](#3)
+	* [3.1 创建组件](#3.1)
 * [N.参考资料](#N)
 
 # <span id="1">1. 开发环境搭建</span>
@@ -31,27 +32,101 @@ TODO
 
 # <span id="3">3. React开发</span>
 
-## <span id="3.1">3.1 声明组件</span>
+## <span id="3.1">3.1 创建组件</span>
 
-### ES6声明组件的方式：
+### 方法1: 使用function声明组件
 
-```javascript
-class HelloWorld extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}</h1>;
-  }
+例子： [/frontend/src/Component/function.js](/frontend/src/Component/function.js)
+
+```JS
+import React from 'react';
+
+function SubFunctionalComponent(props) {
+    return (
+        <textarea>
+            {props.text}
+        </textarea>
+    );
 }
+
+function FunctionalComponent() {
+    return (
+        <div>
+            <h1>This is a functional component</h1>
+            <SubFunctionalComponent text="I'm a sub-functional component" />
+        </div>
+    );
+}
+
+export default FunctionalComponent;
 ```
 
-### 非ES6需要使用"create-react-class"
+### 方法2: ES6声明组件的方式：
+
+```JS
+import React from 'react';
+
+class SubComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>
+                <textarea>{this.props.text}</textarea>
+            </div>
+        );
+    }
+}
+
+class ES6Component extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>This is a ES6 component</h1>
+                <SubComponent text="I'm a sub component" />
+            </div>
+        );
+    }
+}
+
+export default ES6Component;
+```
+
+### 方法3: 使用"create-react-class"
 
 ```javascript
+import React from 'react';
+
 var createReactClass = require('create-react-class');
-var HelloWorld = createReactClass({
-  render: function() {
-    return <h1>Hello, {this.props.name}</h1>;
-  }
+
+var NonES6SubComponent = createReactClass({
+    render: function() {
+        return (
+            <div>
+                <textarea>{this.props.text}</textarea>
+            </div>
+        );
+    }
 });
+
+var NonES6Component = createReactClass({
+    render: function() {
+        return (
+            <div>
+                <h3>This is a non-ES6 component</h3>
+                <NonES6SubComponent text="I'm a non-ES6 sub-component" />
+            </div>
+        );
+    }
+});
+
+export default NonES6Component;
 ```
 
 
