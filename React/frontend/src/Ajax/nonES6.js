@@ -15,6 +15,10 @@ var AuthAjaxNonES6 = createReactClass({
             "http://localhost:8000/api/auth",
             {
                 method:'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencode',
+                    'Accept': 'application/json'
+                },
                 body: "username={this.props.username}&password={this.props.password}"
             }
         ).then(
