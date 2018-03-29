@@ -3,7 +3,12 @@
 * [2.创建项目](#2)
 * [3.React开发](#3)
 	* [3.1 创建组件](#3.1)
+	* [3.2 state](#3.2)
+	* [3.3 props](#3.3)
+	* [3.4 Ajax](#3.4)
+	* [3.5 Router](#3.5)
 * [N.参考资料](#N)
+
 
 # <span id="1">1. 开发环境搭建</span>
 
@@ -129,10 +134,22 @@ var NonES6Component = createReactClass({
 export default NonES6Component;
 ```
 
+## <span id="3.2">3.2 state</span>
 
-## <span id="3.2">3.2 Ajax</span>
+### Non-ES6
 
-### <span id="3.2.x">3.2.x AJAX返回结果的处理方式</span>
+getInitialState()
+
+
+## <span id="3.3">3.3 props</span>
+
+### Non-ES6
+
+getDefaultProps()
+
+## <span id="3.4">3.4 Ajax</span>
+
+### <span id="3.4.x">3.4.x AJAX返回结果的处理方式</span>
 
 |比较|PROMISE|async/await|
 |---|---|---|
@@ -235,9 +252,29 @@ class LoginForm extends React.Component {
 }
 ```
 
+## <span id="3.5">3.5 Router</span>
+
+安装'react-router'
+
+```sh
+npm install --save react-router
+```
+
+https://blog.csdn.net/sinat_17775997/article/details/69218382
+
+http://react-guide.github.io/react-router-cn/
 
 
+## <span id="3.6">3.6 store</span>
 
-# <span id="N">N. 参考资料</span>
+Redux
+
+
+# <span id="4">4. 参考资料</span>
 * [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 * [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+* [使用fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+
+## 4.1 学习例子
+
+https://github.com/bailicangdu/react-pxq

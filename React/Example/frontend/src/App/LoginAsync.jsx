@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
     }
 }
 
-export default class LoginApp extends React.Component {
+export default class LoginAsync extends React.Component {
     constructor(props) {
         super(props);
         this.state = {signedIn:false, token:''};

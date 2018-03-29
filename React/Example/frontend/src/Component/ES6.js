@@ -1,9 +1,11 @@
 import React from 'react';
 
 class SubComponent extends React.Component {
+    /*
     constructor(props) {
         super(props);
     }
+    */
 
     render() {
         return (
@@ -15,9 +17,11 @@ class SubComponent extends React.Component {
 }
 
 class ES6Component extends React.Component {
+    /*
     constructor(props) {
         super(props);
     }
+    */
 
     render() {
         return (
