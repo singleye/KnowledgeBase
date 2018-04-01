@@ -8,6 +8,7 @@ const MainPage = (props) => (
             <li><Link to="/component">Component</Link></li>
             <li><Link to="/ajax">Ajax</Link></li>
             <li><Link to="/refs">Refs</Link></li>
+            <li><Link to="/state">State</Link></li>
         </ul>
     </div>
 );

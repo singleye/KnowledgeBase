@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class LoginES6 extends Component {
+export default class StateES6 extends Component {
     constructor(props) {
         super(props);
 

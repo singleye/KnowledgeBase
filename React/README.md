@@ -264,17 +264,30 @@ https://blog.csdn.net/sinat_17775997/article/details/69218382
 
 http://react-guide.github.io/react-router-cn/
 
+https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+
+Router实现原理： https://github.com/youngwind/blog/issues/109
+
 
 ## <span id="3.6">3.6 store</span>
 
-Redux
+### Redux
+
+Redux中文文档： https://cn.redux.js.org
+React Redux for beginners: https://www.valentinog.com/blog/react-redux-tutorial-beginners/
 
 
 # <span id="4">4. 参考资料</span>
 * [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 * [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 * [使用fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+* [React AJAX best practice](https://www.javascriptstuff.com/react-ajax-best-practices/)
+* [React router](https://github.com/brickspert/blog/issues/1#react-router)
+* [React入门](https://hulufei.gitbooks.io/react-tutorial/content/index.html)
+* [React training](https://reacttraining.com/react-router/web/example/basic)
 
 ## 4.1 学习例子
 
-https://github.com/bailicangdu/react-pxq
+* https://github.com/bailicangdu/react-pxq
+
+* [多页面模板](https://github.com/AI-UNICOM/ai-react-template)

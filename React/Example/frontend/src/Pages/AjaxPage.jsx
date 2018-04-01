@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import LoginAsync from '../App/LoginAsync';
-import LoginPromise from '../App/LoginPromise';
+import LoginAsync from '../Ajax/LoginAsync';
+import LoginPromise from '../Ajax/LoginPromise';
 
 export default class AjaxPage extends React.Component {
     render() {

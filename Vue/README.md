@@ -53,3 +53,10 @@ var app = new Vue({
 # <span id="2">2.组件</span>
 
 类似React的组件思想，VUE也支持组件开发模式，
+
+
+# N.学习例子
+
+基于 vue2 + vuex 构建一个具有 45 个页面的大型单页面应用
+
+https://vue-js.com/topic/58abbd21a9c1282817afc28d

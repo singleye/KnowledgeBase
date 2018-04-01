@@ -2,7 +2,7 @@ import React from 'react';
 
 var createReactClass = require('create-react-class');
 
-var LoginNonES6 = createReactClass({
+var StateNonES6 = createReactClass({
     getInitialState: function() {
         return {
             username:"",
@@ -48,4 +48,4 @@ var LoginNonES6 = createReactClass({
     }
 });
 
-export default LoginNonES6;
+export default StateNonES6;
