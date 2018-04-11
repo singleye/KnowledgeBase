@@ -1,0 +1,13 @@
+--- third_party/tensorrt/tensorrt_configure.bzl.orig	2018-04-11 06:00:48.938065602 +0000
++++ third_party/tensorrt/tensorrt_configure.bzl	2018-04-11 06:02:25.606103215 +0000
+@@ -57,6 +57,10 @@
+     path = "/usr/include/x86_64-linux-gnu"
+     if _headers_exist(repository_ctx, path):
+       return path
++  if trt_install_path == "/usr/lib/aarch64-linux-gnu":
++    path = "/usr/include/aarch64-linux-gnu"
++    if _headers_exist(repository_ctx, path):
++      return path
+   path = str(repository_ctx.path("%s/../include" % trt_install_path).realpath)
+   if _headers_exist(repository_ctx, path):
+     return path

@@ -74,12 +74,11 @@ Pre-build configure, here are the settings need to set manually:
 
 * Select 'CUDA' support
 * cuDNN library path: /usr/lib/aarch64-linux-gnu
+* tensorrt path: /usr/lib/aarch64-linux-gnu
 * CUDA compute capability: 6.2
 
 ```sh
-$ ./configure
-WARNING: ignoring http_proxy in environment.
-Extracting Bazel installation...
+$ ./configure                                                                                                                        [28/4780]
 You have bazel 0.11.1- (@non-git) installed.
 Please specify the location of python. [Default is /usr/bin/python]:
 
@@ -128,10 +127,14 @@ Please specify the location where CUDA 9.0 toolkit is installed. Refer to README
 Please specify the cuDNN version you want to use. [Leave empty to default to cuDNN 7.0]:
 
 
-Please specify the location where cuDNN 7 library is installed. Refer to README.md for more details. [Default is /usr/local/cuda]:/usr/lib/aarch64-linux-gnu
+Please specify the location where cuDNN 7 library is installed. Refer to README.md for more details. [Default is /usr/local/cuda]:/usr/lib/aarch64-linux-gnu/
 
 
-Do you wish to build TensorFlow with TensorRT support? [y/N]:
+Do you wish to build TensorFlow with TensorRT support? [y/N]: y
+TensorRT support will be enabled for TensorFlow.
+
+Please specify the location where TensorRT is installed. [Default is /usr/lib/x86_64-linux-gnu]:/usr/lib/aarch64-linux-gnu/
+
 
 Please specify a list of comma-separated Cuda compute capabilities you want to build with.
 You can find the compute capability of your device at: https://developer.nvidia.com/cuda-gpus.
@@ -156,10 +159,12 @@ Not configuring the WORKSPACE for Android builds.
 Preconfigured Bazel build configs. You can use any of the below by adding "--config=<>" to your build command. See tools/bazel.rc for more details.
         --config=mkl            # Build with MKL support.
         --config=monolithic     # Config for mostly static monolithic build.
+Configuration finished
 ```
 
-Start the build:
+Apply patch [Jetpack3.2/tensorrt.patch](./Jetpack3.2/tensorrt.patch) if you want TensorRT support.
 
+Start the build:
 ```sh
 $ bazel build --config=opt --local_resources 3072,4.0,1.0 --config=cuda //tensorflow/tools/pip_package:build_pip_package
 ```
@@ -172,4 +177,4 @@ $ ./bazel-bin/tensorflow/tools/pip_package/build_pip_package target
 
 # Easy usage
 
-I've build out the pip [package](./Jetpack3.2), feel free to use it to save some time ;-)
+I've build out the pip [package](https://pan.baidu.com/s/1ORp_FCb-ZR-ZAZoGd8CuRw), feel free to use it to save some time ;-)
