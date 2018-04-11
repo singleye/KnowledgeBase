@@ -45,9 +45,9 @@ https://github.com/bazelbuild/bazel/archive/0.11.1.tar.gz
 
 Building it depends on a bunch of stuffs:
 
-[protobuf](https://github.com/google/protobuf)
-[netty-tcnative](http://netty.io/wiki/forked-tomcat-native.html#wiki-h2-5)
-[grpc-java](https://github.com/grpc/grpc-java/blob/master/COMPILING.md)
+* [protobuf](https://github.com/google/protobuf)
+* [netty-tcnative](http://netty.io/wiki/forked-tomcat-native.html#wiki-h2-5)
+* [grpc-java](https://github.com/grpc/grpc-java/blob/master/COMPILING.md)
 
 
 ### Step3: Build tensorflow
