@@ -5,7 +5,10 @@ Tensorflow is a popular machine learning platform and the latest version 1.7 com
 
 ## Environment
 
+* Platform: NVIDIA Jetson TX2
 * Jetpack: v3.2
+* CUDA: 9.0
+* cuDNN: 7.0
 
 ## Build process
 
@@ -166,3 +169,7 @@ After compilation, generate pip package to 'target' directory:
 ```sh
 $ ./bazel-bin/tensorflow/tools/pip_package/build_pip_package target
 ```
+
+# Easy usage
+
+I've build out the pip [package](./Jetpack3.2), feel free to use it to save some time ;-)
